@@ -133,5 +133,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ALLOWED_HOSTS = ['*']
-# runserver.default_port = '7000' 
+
+from django.core.management.commands.runserver import Command as runserver
+
+runserver.default_port = '7000'
