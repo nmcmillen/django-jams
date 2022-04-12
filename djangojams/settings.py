@@ -138,3 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from django.core.management.commands.runserver import Command as runserver
 
 runserver.default_port = '7000'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.gitpod.io',
+]

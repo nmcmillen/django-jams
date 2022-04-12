@@ -16,6 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from music_library.views import return_albums
+from music_library.views import return_songs
+
+## SETTING THE PATH ##
+# path('set the endpoint you want', return the function from views.py)
+# view at the port "http://127.0.0.1:7000/songs" for example
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('albums', return_albums),
+    path('songs', return_songs)
 ]
