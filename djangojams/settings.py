@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'music_library.apps.MusicLibraryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,3 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from django.core.management.commands.runserver import Command as runserver
 
 runserver.default_port = '7000'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.gitpod.io',
+]
